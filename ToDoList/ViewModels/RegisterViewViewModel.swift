@@ -62,11 +62,8 @@ class RegisterViewViewModel: ObservableObject {
                         // This error is critical as Firebase user exists but DB record failed
                         self?.errorMessage = "Failed to save user data: \(error.localizedDescription)"
                         print("Firestore Error: \(error.localizedDescription)")
-                        // Consider how to handle this state (e.g., prompt user to retry saving data or contact support)
                     } else {
                         print("User registered and data saved successfully: \(id)")
-                        // Here you would typically trigger navigation or show success
-                        // You might want to set a @Published var isRegistered = true here.
                         self?.errorMessage = "" // Clear if successful
                     }
                 }
