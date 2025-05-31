@@ -1,0 +1,53 @@
+# MARK: - Xcode
+xcuserdata/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+timeline.xctimeline
+playground.xcworkspace
+
+# MARK: - Firebase
+GoogleService-Info.plist
+
+# MARK: - Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+Package.pins
+
+# MARK: - CocoaPods (if used)
+# Uncomment if using CocoaPods and you don't want to commit Pods
+# Pods/
+# Podfile.lock
+
+# MARK: - Carthage (if used)
+Carthage/Build/
+# Carthage/Checkouts
+
+# MARK: - Fastlane (if used)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# MARK: - Xcode Project Workspace
+*.xcworkspace
+*.xcuserstate
+*.xccheckout
+*.xcodeproj/project.xcworkspace/
+.idea/
+
+# MARK: - Archives and Logs
+*.xcarchive
+*.log
+
+# MARK: - Misc / Temp
+*.tmp
+*.swp
+.DS_Store
+
+# MARK: - Environment Config (optional setup)
+# Uncomment if you use separate Firebase files per environment
+# Configs/GoogleService-Info-*.plist
