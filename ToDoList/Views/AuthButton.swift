@@ -3,7 +3,7 @@ import SwiftUI
 
 struct AuthButton: View {
     let title: String
-    let iconName: String? // Optional icon
+    let iconName: String?
     let action: () -> Void
 
     @Environment(\.colorScheme) var colorScheme
@@ -19,7 +19,7 @@ struct AuthButton: View {
                         .font(.system(size: 16, weight: .semibold))
                 }
             }
-            .foregroundColor(.white) // Text color on button
+            .foregroundColor(.white)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
             .background(

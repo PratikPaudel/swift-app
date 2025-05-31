@@ -7,7 +7,7 @@ struct AuthTextField: View {
     @Binding var text: String
     let iconName: String
     var isSecure: Bool = false
-    @Binding var isSecureVisible: Bool // Use regular Bool, not optional for direct use
+    @Binding var isSecureVisible: Bool
     var keyboardType: UIKeyboardType = .default
     var textContentType: UITextContentType? = nil
     var autocapitalization: UITextAutocapitalizationType = .sentences
@@ -15,9 +15,8 @@ struct AuthTextField: View {
 
     @Environment(\.colorScheme) var colorScheme
 
-    // Initializer for non-secure fields
     init(title: String, placeholder: String, text: Binding<String>, iconName: String,
-         isSecure: Bool = false, // Default to false
+         isSecure: Bool = false,
          keyboardType: UIKeyboardType = .default, textContentType: UITextContentType? = nil,
          autocapitalization: UITextAutocapitalizationType = .sentences, disableAutocorrection: Bool = false) {
         self.title = title
@@ -25,16 +24,15 @@ struct AuthTextField: View {
         self._text = text
         self.iconName = iconName
         self.isSecure = isSecure
-        self._isSecureVisible = .constant(false) // Dummy binding, not used
+        self._isSecureVisible = .constant(false)
         self.keyboardType = keyboardType
         self.textContentType = textContentType
         self.autocapitalization = autocapitalization
         self.disableAutocorrection = disableAutocorrection
     }
 
-    // Initializer for secure fields that need visibility toggle
     init(title: String, placeholder: String, text: Binding<String>, iconName: String,
-         isSecure: Bool, isSecureVisible: Binding<Bool>, // isSecure must be true
+         isSecure: Bool, isSecureVisible: Binding<Bool>,
          textContentType: UITextContentType? = nil) {
         self.title = title
         self.placeholder = placeholder
@@ -43,9 +41,7 @@ struct AuthTextField: View {
         self.isSecure = isSecure
         self._isSecureVisible = isSecureVisible
         self.textContentType = textContentType
-        // Other params like keyboardType, autocapitalization are less relevant for passwords
     }
-
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -53,7 +49,7 @@ struct AuthTextField: View {
                 .font(.system(size: 15, weight: .semibold, design: .rounded))
                 .foregroundStyle(
                     colorScheme == .dark ?
-                        Color.gray.opacity(0.9) : Color.secondaryText
+                        Color.gray.opacity(0.9) : Color.secondary
                 )
             
             HStack(spacing: 12) {
@@ -83,7 +79,7 @@ struct AuthTextField: View {
                 }
                 .foregroundStyle(
                     colorScheme == .dark ?
-                        Color.white : Color.primaryText
+                        Color.white : Color.primary
                 )
                 
                 if isSecure {
