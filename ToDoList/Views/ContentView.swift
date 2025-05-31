@@ -13,10 +13,24 @@ struct ContentView: View {
         if viewModel.isSignedIn && !viewModel.currentUserId.isEmpty {
             // User is signed in, show the main content of the app
             // We should pass the currentUserId to ToDoListView so it can fetch user-specific data
-            ToDoListView()
+            accountView
         } else {
             // No user is signed in, show the LoginView
             LoginView()
+        }
+    }
+    
+    @ViewBuilder
+    var accountView: some View {
+        TabView{
+            ToDoListView(userId: viewModel.currentUserId)
+                .tabItem {
+                Label("Home", systemImage: "house")
+            }
+            ProfileView()
+                .tabItem {
+                Label("Profile", systemImage: "person.circle")
+            }
         }
     }
 }
