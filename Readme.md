@@ -2,6 +2,12 @@
 
 ToDoList is a modern and sleek task management application built with SwiftUI, demonstrating core iOS development concepts including MVVM architecture, Firebase integration for authentication and real-time data storage, and adaptive UI for both light and dark modes.
 
+## Video Walkthrough
+
+Check out the full walkthrough of the app on YouTube:  
+[![Watch the video](https://img.youtube.com/vi/YLsLqRb6wAs/0.jpg)](https://youtu.be/YLsLqRb6wAs)
+
+
 ## Features
 
 ### User Authentication
