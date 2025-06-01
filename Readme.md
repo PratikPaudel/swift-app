@@ -27,38 +27,24 @@ ToDoList is a modern and sleek task management application built with SwiftUI, d
 
 ### 1. Authentication Flow (Login & Registration)
 ```html
-<!-- TODO: Add Login Screen Screenshot Here -->
-<img src="path/to/login_screen.png" width="200" alt="Login Screen">
+<img src="AppScreenshots/LoginView.png" width="200" alt="Login Screen">
 
-<!-- TODO: Add Registration Screen Screenshot Here -->
-<img src="path/to/register_screen.png" width="200" alt="Registration Screen">
+<img src="AppScreenshots/RegisterView.png" width="200" alt="Registration Screen">
 ```
 
 ### 2. Main To-Do List View
 ```html
-<!-- TODO: Add ToDo List (with items) Screenshot Here -->
-<img src="path/to/todolist_view.png" width="200" alt="To-Do List View">
-
-<!-- TODO: Add ToDo List (empty state) Screenshot Here -->
-<img src="path/to/todolist_empty.png" width="200" alt="Empty To-Do List">
+<img src="AppScreenshots/MainView.png" width="200" alt="To-Do List View">
 ```
 
 ### 3. Adding a New Task
 ```html
-<!-- TODO: Add New Task Sheet Screenshot Here -->
-<img src="path/to/new_task_sheet.png" width="200" alt="New Task Sheet">
+<img src="AppScreenshots/NewTask.png" width="200" alt="New Task Sheet">
 ```
 
 ### 4. Profile View
 ```html
-<!-- TODO: Add Profile View Screenshot Here -->
-<img src="path/to/profile_view.png" width="200" alt="Profile View">
-```
-
-### 5. Dark Mode Support
-```html
-<!-- TODO: Add Dark Mode Screenshot (e.g., ToDo List or Profile) Here -->
-<img src="path/to/dark_mode_example.png" width="200" alt="Dark Mode Example">
+<img src="AppScreenshots/ProfileView.png" width="200" alt="Profile View">
 ```
 
 ## Technologies Used

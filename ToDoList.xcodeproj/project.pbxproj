@@ -14,6 +14,11 @@
 
 /* Begin PBXFileReference section */
 		0D7E07552DEC0B08005AF960 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		0D7E07582DEC1EB0005AF960 /* LoginView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginView.png; sourceTree = "<group>"; };
+		0D7E07592DEC1EB0005AF960 /* MenuView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuView.png; sourceTree = "<group>"; };
+		0D7E075A2DEC1EB0005AF960 /* NewTask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewTask.png; sourceTree = "<group>"; };
+		0D7E075B2DEC1EB0005AF960 /* ProfileView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileView.png; sourceTree = "<group>"; };
+		0D7E075C2DEC1EB0005AF960 /* RegisterView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegisterView.png; sourceTree = "<group>"; };
 		0DFFB8F22DEA886700CD449F /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -38,9 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D7E07572DEC1E92005AF960 /* AppScreenshots */ = {
+			isa = PBXGroup;
+			children = (
+				0D7E07582DEC1EB0005AF960 /* LoginView.png */,
+				0D7E07592DEC1EB0005AF960 /* MenuView.png */,
+				0D7E075A2DEC1EB0005AF960 /* NewTask.png */,
+				0D7E075B2DEC1EB0005AF960 /* ProfileView.png */,
+				0D7E075C2DEC1EB0005AF960 /* RegisterView.png */,
+			);
+			path = AppScreenshots;
+			sourceTree = "<group>";
+		};
 		0DFFB8E92DEA886700CD449F = {
 			isa = PBXGroup;
 			children = (
+				0D7E07572DEC1E92005AF960 /* AppScreenshots */,
 				0D7E07552DEC0B08005AF960 /* Readme.md */,
 				0DFFB8F42DEA886700CD449F /* ToDoList */,
 				0DFFB8F32DEA886700CD449F /* Products */,
