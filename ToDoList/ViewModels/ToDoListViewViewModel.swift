@@ -21,6 +21,7 @@ class ToDoListViewViewModel: ObservableObject {
     }
 
     func fetchToDoItems() {
+        // ... (fetchToDoItems function remains the same as before)
         guard !userId.isEmpty else {
             print("Error: User ID is empty, cannot fetch to-do items.")
             return
@@ -47,19 +48,46 @@ class ToDoListViewViewModel: ObservableObject {
             }
 
             self.items = documents.compactMap { documentSnapshot -> ToDoListItem? in
-                let data = documentSnapshot.data() // This is [String: Any]
-                let documentId = documentSnapshot.documentID // The ID of the document
-
-                print("Attempting to decode document ID: \(documentId) with data: \(data)") // DEBUG
-                
-                // Use the manual failable initializer
-                let item = ToDoListItem(id: documentId, dictionary: data)
-                if item == nil {
-                    print("Failed to decode document ID: \(documentId)") // DEBUG
+                do {
+                    let item = try documentSnapshot.data(as: ToDoListItem.self)
+                    // print("Fetched and decoded item ID: \(item.id ?? "nil"), Title: \(item.title)")
+                    return item
+                } catch {
+                    print("Error decoding to-do item from Firestore: \(error.localizedDescription)")
+                    // print("Document data that failed to decode: \(documentSnapshot.data())")
+                    return nil
                 }
-                return item
             }
-            print("Fetched \(self.items.count) to-do items for user \(self.userId)")
+            // print("Fetched \(self.items.count) to-do items for user \(self.userId)")
         }
+    }
+
+    // --- NEW FUNCTION ---
+    func delete(itemId: String) {
+        guard !userId.isEmpty else {
+            print("Error: User ID is empty, cannot delete item.")
+            return
+        }
+        
+        guard !itemId.isEmpty else {
+            print("Error: Item ID is empty, cannot delete.")
+            return
+        }
+
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(userId)
+            .collection("todos")
+            .document(itemId)
+            .delete { error in
+                if let error = error {
+                    print("Error deleting item \(itemId): \(error.localizedDescription)")
+                    // Optionally, show an error message to the user
+                } else {
+                    print("Successfully deleted item \(itemId)")
+                    // The snapshot listener will automatically update the `items` array,
+                    // so no manual removal from `self.items` is typically needed here.
+                }
+            }
     }
 }
