@@ -26,26 +26,17 @@ ToDoList is a modern and sleek task management application built with SwiftUI, d
 ## Screenshots
 
 ### 1. Authentication Flow (Login & Registration)
-```html
 <img src="AppScreenshots/LoginView.png" width="200" alt="Login Screen">
-
 <img src="AppScreenshots/RegisterView.png" width="200" alt="Registration Screen">
-```
 
 ### 2. Main To-Do List View
-```html
 <img src="AppScreenshots/MainView.png" width="200" alt="To-Do List View">
-```
 
 ### 3. Adding a New Task
-```html
 <img src="AppScreenshots/NewTask.png" width="200" alt="New Task Sheet">
-```
 
 ### 4. Profile View
-```html
 <img src="AppScreenshots/ProfileView.png" width="200" alt="Profile View">
-```
 
 ## Technologies Used
 
